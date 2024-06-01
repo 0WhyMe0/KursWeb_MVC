@@ -35,7 +35,7 @@ namespace KursWeb.Controllers
             {
                 _db.Categories.Add(obj);
                 _db.SaveChanges();
-                TempData["Success"] = "Category created successfully";
+                TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index");
             }
             return View();
@@ -64,7 +64,7 @@ namespace KursWeb.Controllers
             {
                 _db.Categories.Update(obj);
                 _db.SaveChanges();
-                TempData["Success"] = "Category updated successfully";
+                TempData["success"] = "Category updated successfully";
                 return RedirectToAction("Index");
             }
             return View();
@@ -98,7 +98,7 @@ namespace KursWeb.Controllers
 
             _db.Categories.Remove(obj);
             _db.SaveChanges();
-            TempData["Success"] = "Category daleted successfully"; 
+            TempData["success"] = "Category daleted successfully"; 
 
             return RedirectToAction("Index");
         }
